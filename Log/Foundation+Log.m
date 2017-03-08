@@ -8,7 +8,31 @@
 
 #import <Foundation/Foundation.h>
 
+@implementation UIView (Log)
+
++ (NSString *)searchAllSubviews:(UIView *)superView {
+    
+    // 这样打印的xml没有跟,所以不是标准的xml格式
+    NSMutableString *xml = [NSMutableString string];
+    NSString *class = NSStringFromClass(superView.class);
+    class = [class stringByReplacingOccurrencesOfString:@"_" withString:@""];
+    [xml appendFormat:@"<%@ frame=\"%@\">",class,NSStringFromCGRect(superView.frame)];
+    for (UIView *childView in superView.subviews) {
+        [self searchAllSubviews:childView];
+    }
+    [xml appendFormat:@"</%@>",class];
+    return xml;
+}
+
+- (NSString *)description {
+    return [UIView searchAllSubviews:self];
+}
+
+@end
+
+
 @implementation NSDictionary (Log)
+
 - (NSString *)descriptionWithLocale:(id)locale
 {
     NSMutableString *string = [NSMutableString string];
