@@ -10,71 +10,71 @@
 
 @implementation UIView (JXExtension)
 
-- (CGFloat)x {
+- (CGFloat)jx_x {
     return self.frame.origin.x;
 }
 
-- (void)setX:(CGFloat)x {
+- (void)setJx_x:(CGFloat)jx_x {
     CGRect frame = self.frame;
-    frame.origin.x = x;
+    frame.origin.x = jx_x;
     self.frame = frame;
 }
 
 
-- (CGFloat)y {
+- (CGFloat)jx_y {
     return self.frame.origin.y;
 }
 
-- (void)setY:(CGFloat)y {
+- (void)setJx_y:(CGFloat)jx_y {
     CGRect frame = self.frame;
-    frame.origin.y = y;
+    frame.origin.y = jx_y;
     self.frame = frame;
 }
 
-- (CGFloat)w {
+- (CGFloat)jx_w {
     return self.frame.size.width;
 }
 
-- (void)setW:(CGFloat)w {
+- (void)setJx_w:(CGFloat)jx_w {
     CGRect frame = self.frame;
-    frame.size.width = w;
+    frame.size.width = jx_w;
     self.frame = frame;
 }
 
-- (CGFloat)h {
+- (CGFloat)jx_h {
     return self.frame.size.height;
 }
 
-- (void)setH:(CGFloat)h {
+- (void)setJx_h:(CGFloat)jx_h {
     CGRect frame = self.frame;
-    frame.size.height = h;
+    frame.size.height = jx_h;
     self.frame = frame;
 }
 
-- (CGSize)size {
+- (CGSize)jx_size {
     return self.frame.size;
 }
-- (void)setSize:(CGSize)size {
+- (void)setJx_size:(CGSize)jx_size {
     CGRect frame = self.frame;
-    frame.size = size;
+    frame.size = jx_size;
     self.frame = frame;
 }
 
-- (CGFloat)centerX {
+- (CGFloat)jx_centerX {
     return self.center.x;
 }
-- (void)setCenterX:(CGFloat)centerX {
+- (void)setJx_CenterX:(CGFloat)jx_centerX {
     CGPoint center = self.center;
-    center.x = centerX;
+    center.x = jx_centerX;
     self.center = center;
 }
 
-- (CGFloat)centerY {
+- (CGFloat)jx_centerY {
     return self.center.y;
 }
-- (void)setCenterY:(CGFloat)centerY {
+- (void)setJx_centerY:(CGFloat)jx_centerY {
     CGPoint center = self.center;
-    center.y = centerY;
+    center.y = jx_centerY;
     self.center = center;
 }
 @end

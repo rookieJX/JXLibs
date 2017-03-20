@@ -10,17 +10,17 @@
 
 @interface UIView (JXExtension)
 /** x值 */
-@property (nonatomic,assign) CGFloat x;
+@property (nonatomic,assign) CGFloat jx_x;
 /** y值 */
-@property (nonatomic,assign) CGFloat y;
+@property (nonatomic,assign) CGFloat jx_y;
 /** 宽度 */
-@property (nonatomic,assign) CGFloat w;
+@property (nonatomic,assign) CGFloat jx_w;
 /** 高度 */
-@property (nonatomic,assign) CGFloat h;
+@property (nonatomic,assign) CGFloat jx_h;
 /** 大小size */
-@property (nonatomic,assign) CGSize size;
+@property (nonatomic,assign) CGSize jx_size;
 /** 中心点Y值 */
-@property (nonatomic,assign) CGFloat centerY;
+@property (nonatomic,assign) CGFloat jx_centerY;
 /** 中心点X值 */
-@property (nonatomic,assign) CGFloat centerX;
+@property (nonatomic,assign) CGFloat jx_centerX;
 @end
